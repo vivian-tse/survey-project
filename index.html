@@ -6,46 +6,70 @@
 </head>
 
 <body>
+
   <h1 id="title">Food Preference Survey</h1>
   <p id="description">Thank you for participating in our survey!</p>
 
   <form id="survey-form" action="thankyou.html">
 
+    <!-- Name -->
     <label id="name-label" for="name">Name:</label><br>
     <input id="name" name="name" type="text" required><br><br>
 
+    <!-- Email -->
     <label id="email-label" for="email">Email:</label><br>
-    <input id="email" name="email" type="email" required><br><br>
+    <input 
+      id="email" 
+      name="email" 
+      type="email" 
+      placeholder="example@email.com"
+      required
+    ><br><br>
 
+    <!-- Age -->
     <label id="number-label" for="number">Age:</label><br>
-    <input id="number" name="age" type="number" min="5" max="100" required><br><br>
+    <input 
+      id="number" 
+      name="age" 
+      type="number" 
+      min="5" 
+      max="100" 
+      placeholder="Enter your age"
+      required
+    ><br><br>
 
+    <!-- Dropdown -->
     <label for="dropdown">Cake or Coffee:</label><br>
-    <select id="dropdown" name="preference">
+    <select id="dropdown" name="preference" required>
+      <option value="" disabled selected>Select one</option>
       <option value="cake">Cake</option>
       <option value="coffee">Coffee</option>
     </select><br><br>
 
+    <!-- Radio group 1 -->
     <p>Eggs or Milk:</p>
-    <input type="radio" id="eggs" name="choice" value="eggs">
+    <input type="radio" id="eggs" name="choice" value="eggs" required>
     <label for="eggs">Eggs</label><br>
 
     <input type="radio" id="milk" name="choice" value="milk">
     <label for="milk">Milk</label><br><br>
 
+    <!-- Radio group 2 -->
     <p>Pancake or Sandwich:</p>
-    <input type="radio" id="pancake" name="food" value="pancake">
+    <input type="radio" id="pancake" name="food" value="pancake" required>
     <label for="pancake">Pancake</label><br>
 
     <input type="radio" id="sandwich" name="food" value="sandwich">
     <label for="sandwich">Sandwich</label><br><br>
 
+    <!-- Comments -->
     <label for="comments">Additional comments:</label><br>
     <textarea id="comments" name="comments" rows="4"></textarea><br><br>
 
+    <!-- Submit -->
     <button type="submit" id="submit">Submit Survey</button>
 
   </form>
+
 </body>
 </html>
-
